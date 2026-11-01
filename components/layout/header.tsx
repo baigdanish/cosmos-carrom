@@ -64,6 +64,7 @@ export function Header() {
             className="font-serif text-2xl font-semibold text-forest"
           >
             COSMOS <span className="text-queen">●</span> CARROM
+            {/* by Danish */}
           </Link>
           <nav
             className="hidden items-center gap-7 lg:flex"
