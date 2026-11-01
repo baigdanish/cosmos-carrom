@@ -1,0 +1,2 @@
+import type { Config } from 'tailwindcss';
+export default { content:['./app/**/*.{ts,tsx}','./components/**/*.{ts,tsx}'], theme:{extend:{colors:{ivory:'#F7F3E9',forest:'#183D31',walnut:'#74462C',queen:'#A13C36',ink:'#1D2924',sand:'#E8DDC8'},fontFamily:{sans:['var(--font-sans)','system-ui','sans-serif'],serif:['var(--font-serif)','Georgia','serif']},boxShadow:{soft:'0 16px 45px rgba(37,45,39,.10)'}}},plugins:[] } satisfies Config;

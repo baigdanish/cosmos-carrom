@@ -1,0 +1,1 @@
+import type {Metadata} from 'next';import {ShopClient} from './shop-client';export const metadata:Metadata={title:'Shop carrom boards & accessories',description:'Explore demonstration carrom boards, strikers, stands and care essentials.'};export default function Shop(){return <ShopClient/>}
