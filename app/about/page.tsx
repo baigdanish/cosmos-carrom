@@ -1,1 +1,64 @@
-import type{Metadata}from'next';import Link from'next/link';import Image from'next/image';import{brand}from'@/config/brand';export const metadata:Metadata={title:'About',description:`About ${brand.name}, a demonstration specialist carrom storefront.`};export default function About(){return <div><section className="container grid gap-12 py-20 lg:grid-cols-2 lg:items-center"><div><p className="eyebrow">About the house</p><h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">More considered choices for a better game.</h1><p className="mt-7 max-w-xl text-lg leading-8 text-ink/65">{brand.name} is a demonstration concept for a specialist carrom store: a calm place to understand surface, size, and playing feel before choosing.</p></div><div className="relative aspect-square bg-sand"><Image src="/images/board-forest.svg" fill alt="Full-size carrom board illustration" className="object-cover"/></div></section><section className="bg-white py-20"><div className="container grid gap-10 md:grid-cols-3">{[['Clear choices','The catalog is organised around how people play, from compact first boards to substantial practice surfaces.'],['Useful detail','Sizes, plywood thickness, and care guidance are presented in plain language.'],['A demo brand','This website does not represent an operating retailer. Products, prices, and brand details are illustrative.']].map(([a,b])=><div key={a} className="border-t border-queen pt-6"><h2 className="font-serif text-2xl">{a}</h2><p className="mt-3 text-sm leading-7 text-ink/60">{b}</p></div>)}</div></section><div className="container py-20 text-center"><h2 className="section-title">Find your place at the table.</h2><Link href="/shop/" className="btn btn-primary mt-8">Explore the collection</Link></div></div>}
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { brand } from "@/config/brand";
+export const metadata: Metadata = {
+  title: "About",
+  description: `About ${brand.name}, a demonstration specialist carrom storefront.`,
+};
+export default function About() {
+  return (
+    <div>
+      <section className="container grid gap-12 py-20 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p className="eyebrow">About the house</p>
+          <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
+            More considered choices for a better game.
+          </h1>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-ink/65">
+            {brand.name} is a demonstration concept for a specialist carrom
+            store: a calm place to understand surface, size, and playing feel
+            before choosing.
+          </p>
+        </div>
+        <div className="relative aspect-square bg-sand">
+          <Image
+            src="/images/board-forest.svg"
+            fill
+            alt="Full-size carrom board illustration"
+            className="object-cover"
+          />
+        </div>
+      </section>
+      <section className="bg-white py-20">
+        <div className="container grid gap-10 md:grid-cols-3">
+          {[
+            [
+              "Clear choices",
+              "The catalog is organised around how people play, from compact first boards to substantial practice surfaces.",
+            ],
+            [
+              "Useful detail",
+              "Sizes, plywood thickness, and care guidance are presented in plain language.",
+            ],
+            [
+              "A demo brand",
+              "This website does not represent an operating retailer. Products, prices, and brand details are illustrative.",
+            ],
+          ].map(([a, b]) => (
+            <div key={a} className="border-t border-queen pt-6">
+              <h2 className="font-serif text-2xl">{a}</h2>
+              <p className="mt-3 text-sm leading-7 text-ink/60">{b}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <div className="container py-20 text-center">
+        <h2 className="section-title">Find your place at the table.</h2>
+        <Link href="/shop/" className="btn btn-primary mt-8">
+          Explore the collection
+        </Link>
+      </div>
+    </div>
+  );
+}
